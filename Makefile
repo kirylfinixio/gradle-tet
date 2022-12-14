@@ -2,7 +2,7 @@ SHELL = /bin/bash
 
 up:
 	make build-app
-	docker run -it -v "$(PWD):/home/gradle" --name="java-decrypt-test" java-decrypt-test
+	docker run -it -d -v "$(PWD):/home/gradle" --name="java-decrypt-test" java-decrypt-test
 
 down:
 	docker stop java-decrypt-test
